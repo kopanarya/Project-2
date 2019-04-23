@@ -1,7 +1,7 @@
 import React from 'react'
 import axios from 'axios'
 
-class AirQualityIndex extends React.Component {
+class AirQualityShow extends React.Component {
 
   constructor(){
     super()
@@ -23,13 +23,16 @@ class AirQualityIndex extends React.Component {
         <div className="container">
           <div className="columns is-multiline">
             <div  className="column is-half-desktop is-full-tablet">
+              <h1 className="title is-2">ForecastText</h1>
               <h1>{this.state.AirQuality.currentForecast[0].forecastText}</h1>
             </div>
             <div className="column is-half-desktop is-full-tablet">
               <div className="column">
+                <h1 className="title is-2">Forecast Band</h1>
                 <h1>{this.state.AirQuality.currentForecast[0].forecastBand}</h1>
               </div>
               <div className="column">
+                <h1 className="title is-2">Forecast Summary</h1>
                 <h1>{this.state.AirQuality.currentForecast[0].forecastSummary}</h1>
               </div>
             </div>
@@ -40,4 +43,4 @@ class AirQualityIndex extends React.Component {
   }
 
 }
-export default AirQualityIndex
+export default AirQualityShow

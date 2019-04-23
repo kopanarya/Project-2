@@ -6,6 +6,7 @@ import 'bulma'
 
 import Home from './components/Home'
 import AirQualityShow from './components/AirQualityShow'
+import BikePointShow from './components/BikePointShow'
 
 class App extends React.Component{
   constructor(){
@@ -19,6 +20,7 @@ class App extends React.Component{
     return (
       <Router>
         <Switch>
+          <Route path="/BikePoint" component={BikePointShow} />
           <Route path="/AirQuality" component={AirQualityShow} />
           <Route path="/" component={Home} />
 
