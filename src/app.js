@@ -1,8 +1,11 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
 import { HashRouter as Router, Route, Switch } from 'react-router-dom'
+
 import 'bulma'
+
 import Home from './components/Home'
+import AirQualityIndex from './components/AirQualityIndex'
 
 class App extends React.Component{
   constructor(){
@@ -16,6 +19,7 @@ class App extends React.Component{
     return (
       <Router>
         <Switch>
+          <Route path="/AirQuality" component={AirQualityIndex} />
           <Route path="/" component={Home} />
 
         </Switch>
