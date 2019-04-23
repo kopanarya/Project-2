@@ -7,6 +7,8 @@ import 'bulma'
 import Home from './components/Home'
 import AirQualityShow from './components/AirQualityShow'
 import BikePointShow from './components/BikePointShow'
+import TubeStatusShow from './components/TubeStatusShow'
+import Navbar from './components/Navbar'
 
 class App extends React.Component{
   constructor(){
@@ -28,10 +30,12 @@ class App extends React.Component{
     if(!this.state.location) return null
     return (
       <Router>
-        <BikePointShow location={this.state.location} />
+        <Navbar />
         <Switch>
-          <Route path="/BikePoint" component={BikePointShow} />
-          <Route path="/AirQuality" component={AirQualityShow} />
+
+          <Route path="/bike-point" render={() => <BikePointShow location={this.state.location} />} />
+          <Route path="/air-quality" component={AirQualityShow} />
+          <Route path="/tube-status" component={TubeStatusShow} />
           <Route path="/" component={Home} />
         </Switch>
 

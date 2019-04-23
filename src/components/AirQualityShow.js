@@ -1,5 +1,7 @@
 import React from 'react'
 import axios from 'axios'
+// this needs to be installed and imported
+import he from 'he'
 
 class AirQualityShow extends React.Component {
 
@@ -10,8 +12,13 @@ class AirQualityShow extends React.Component {
     }
   }
 
+  //this is needed to make the decode happen
+  decodeHTML(str) {
+    return he.decode(str)
+  }
+
   componentDidMount() {
-    axios.get('https://api.tfl.gov.uk/AirQuality/')
+    axios.get('https://cors-anywhere.herokuapp.com/https://api.tfl.gov.uk/AirQuality/')
       .then(res => this.setState({ AirQuality: res.data }))
   }
 
@@ -24,7 +31,9 @@ class AirQualityShow extends React.Component {
           <div className="columns is-multiline">
             <div  className="column is-half-desktop is-full-tablet">
               <h1 className="title is-2">ForecastText</h1>
-              <h1>{this.state.AirQuality.currentForecast[0].forecastText}</h1>
+              <div className="content">
+                <p dangerouslySetInnerHTML={{ __html: this.decodeHTML(this.state.AirQuality.currentForecast[0].forecastText) }}></p>
+              </div>
             </div>
             <div className="column is-half-desktop is-full-tablet">
               <div className="column">
