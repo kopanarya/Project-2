@@ -9,6 +9,7 @@ import AirQualityShow from './components/AirQualityShow'
 import BikePointShow from './components/BikePointShow'
 import TubeStatusShow from './components/TubeStatusShow'
 import Navbar from './components/Navbar'
+import WeatherShow  from './components/WeatherShow'
 
 class App extends React.Component{
   constructor(){
@@ -36,6 +37,7 @@ class App extends React.Component{
           <Route path="/bike-point" render={() => <BikePointShow location={this.state.location} />} />
           <Route path="/air-quality" component={AirQualityShow} />
           <Route path="/tube-status" component={TubeStatusShow} />
+          <Route path="/weather" component={WeatherShow} />
           <Route path="/" component={Home} />
         </Switch>
 
