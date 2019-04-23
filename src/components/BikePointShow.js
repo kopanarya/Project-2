@@ -3,35 +3,25 @@ import axios from 'axios'
 
 class BikePointShow extends React.Component {
 
-  constructor() {
-    super()
+  constructor(props) {
+    super(props)
     this.state = {
       BikePoint: []
     }
   }
 
-
   componentDidMount() {
-    axios.get('https://api.tfl.gov.uk/BikePoint/')
-      .then(res => this.setState({ BikePoint: res.data }))
+    axios.get(`https://api.tfl.gov.uk/bikepoint?lat=${this.props.location.lat}&lon=${this.props.location.lon}&radius=500`)
+      .then(res => this.setState({ BikePoint: res.data.places }))
   }
   render(){
+    console.log(this.state.BikePoint)
     return(
       <section className="section">
         <div className="container">
-          <div className="field is-grouped">
-            <p className="control is-expanded">
-              <input className="input" type="text" placeholder="Find a repository" />
-            </p>
-            <p className="control">
-              <a className="button is-info">
-                Search
-              </a>
-            </p>
-          </div>
           <div className="columns is-multiline">
             {this.state.BikePoint.map(bike =>
-              <div key={bike.id} className="column is-one-quarter-desktop is-half-tablet">
+              <div key={bike.commonName} className="column is-one-quarter-desktop is-half-tablet">
 
                 <h1 className="subtitle is-3">{bike.commonName}</h1>
                 <h1 className="subtitle is-5">Avaliable Bikes :{bike.additionalProperties[6].value}</h1>
