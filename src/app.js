@@ -5,7 +5,7 @@ import { HashRouter as Router, Route, Switch } from 'react-router-dom'
 import 'bulma'
 
 import Home from './components/Home'
-import AirQualityIndex from './components/AirQualityIndex'
+import AirQualityShow from './components/AirQualityShow'
 
 class App extends React.Component{
   constructor(){
@@ -19,7 +19,7 @@ class App extends React.Component{
     return (
       <Router>
         <Switch>
-          <Route path="/AirQuality" component={AirQualityIndex} />
+          <Route path="/AirQuality" component={AirQualityShow} />
           <Route path="/" component={Home} />
 
         </Switch>

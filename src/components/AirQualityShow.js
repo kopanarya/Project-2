@@ -1,5 +1,4 @@
 import React from 'react'
-import Link from 'react-router-dom'
 import axios from 'axios'
 
 class AirQualityIndex extends React.Component {
@@ -7,29 +6,31 @@ class AirQualityIndex extends React.Component {
   constructor(){
     super()
     this.state = {
-      airquality: null
+      AirQuality: null
     }
   }
 
   componentDidMount() {
     axios.get('https://api.tfl.gov.uk/AirQuality/')
-      .then(res => this.setState({ airquality: res.data }))
+      .then(res => this.setState({ AirQuality: res.data }))
   }
 
   render() {
+    if(!this.state.AirQuality) return null
+
     return (
       <section className="section">
         <div className="container">
           <div className="columns is-multiline">
-            <div className="column is-half-desktop is-full-tablet">
-              <h1>Forecast Text</h1>
+            <div  className="column is-half-desktop is-full-tablet">
+              <h1>{this.state.AirQuality.currentForecast[0].forecastText}</h1>
             </div>
             <div className="column is-half-desktop is-full-tablet">
               <div className="column">
-                <h1>Forecast Band</h1>
+                <h1>{this.state.AirQuality.currentForecast[0].forecastBand}</h1>
               </div>
               <div className="column">
-                <h1>Forecast summary</h1>
+                <h1>{this.state.AirQuality.currentForecast[0].forecastSummary}</h1>
               </div>
             </div>
           </div>
