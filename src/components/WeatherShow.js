@@ -22,7 +22,7 @@ class WeatherShow extends React.Component {
     return (
 
       <section className="section">
-        <div className="container">
+        <div className="container weathers">
           <div className="columns is-multiline">
             <div className="column is-full-desktop">
               <h2 className="title is-2">London</h2>
@@ -45,8 +45,6 @@ class WeatherShow extends React.Component {
               <div className="column  is-full-desktop">
                 <p className="subtitle is-3">{this.state.weather.minutely.summary}</p>
               </div>
-
-
             </div>
           </div>
         </div>

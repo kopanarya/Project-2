@@ -1,5 +1,5 @@
 @import url('https://fonts.googleapis.com/css?family=Ubuntu');
-
+$color: white;
 
 body {
   font-family: 'Ubuntu', sans-serif;
@@ -32,25 +32,80 @@ body {
 
   }
 
-  .weather-icon {
-    height: 150px;
-    background-size: contain;
-    background-repeat: no-repeat;
-    background-position: center;
-    &.partly-cloudy-day {
-      background-image: url('/images/partly-cloudy.png');
+    .weather-icon {
+      height: 150px;
+      background-size: contain;
+      background-repeat: no-repeat;
+      background-position: center;
+      &.partly-cloudy-day {
+        background-image: url('/images/partly-cloudy.png');
+      }
+      &.clear-day {
+        background-image: url('/images/clear.png');
+      }
+      &.cloudy {
+        background-image: url('/images/cloudy.png');
+      }
+      &.rain {
+        background-image: url('/images/rain.png');
+      }
+      &.fog {
+        background-image: url('/images/fog.png');
+      }
     }
-    &.clear-day {
-      background-image: url('/images/clear.png');
-    }
-    &.cloudy {
-      background-image: url('/images/cloudy.png');
-    }
-    &.rain {
-      background-image: url('/images/rain.png');
-    }
-    &.fog {
-      background-image: url('/images/fog.png');
+  .column{
+    &.tube-color {
+      height: 50px;
+
+      &.Bakerloo{
+       background-color: #B26300;
+       color: $color;
+      }
+      &.Central{
+       background-color: #DC241F;
+       color: $color;
+      }
+      &.Circle{
+       background-color: #FFD329;
+       color: $color;
+      }
+      &.Circle{
+       background-color: #FFD329;
+       color: $color;
+      }
+      &.District{
+       background-color: #007D32;
+       color: $color;
+      }
+      &.Hammersmith{
+       background-color: #F4A9BE;
+       color: $color;
+      }
+      &.Jubilee{
+       background-color: #868F98;
+       color: $color;
+      }
+      &.Metropolitan{
+       background-color:#751056;
+       color: $color;
+      }
+      &.Northern{
+       background-color:#000000;
+       color: $color;
+      }
+      &.Piccadilly{
+       background-color:#0019A8;
+       color: $color;
+      }
+      &.Victoria{
+       background-color:#00A0E2;
+       color: $color;
+      }
+      &.Waterloo{
+       background-color:#93CEBA;
+       color: $color;
+      }
     }
   }
+
 }

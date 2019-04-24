@@ -18,14 +18,16 @@ class TubeStatusShow extends React.Component {
   }
 
   render(){
+
     return(
       <section className="section">
         <div className="container">
           <h1></h1>
           <div  className="columns  is-multiline">
             {this.state.lines.map(line =>
-              <div key={line.name} className="column   is-full-desktop">
-                <div  className="column is-half-desktop">
+
+              <div key={line.name} className="column is-full-desktop">
+                <div  className={`column tube-color ${line.name} is-half-desktop`}>
                   <h2>{line.name}</h2>
                 </div>
                 <div className="column is-half-desktop">
