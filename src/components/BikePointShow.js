@@ -23,7 +23,7 @@ class BikePointShow extends React.Component {
           <hr />
           <div className="columns is-multiline">
             {this.state.BikePoint.map(bike =>
-              <div key={bike.commonName} className="column is-one-quarter-desktop is-half-tablet has-text-centered bikepoints">
+              <div key={bike.commonName} className="column is-one-third-desktop is-half-tablet has-text-centered bikepoints">
 
                 <h4 className="subtitle is-4">{bike.commonName}</h4>
                 <p><strong>Avaliable Bikes:</strong> {bike.additionalProperties[6].value}</p>

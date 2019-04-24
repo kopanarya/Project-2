@@ -26,28 +26,23 @@ class WeatherShow extends React.Component {
 
       <section className="section">
         <div className="container weathers">
-          <div className="columns is-multiline">
-            <div className="column is-full-desktop">
+          <div className="columns columns-weather is-multiline">
+            <div className="column is-full-desktop is-mobile is-full-tablet">
               <h2 className="title is-2">London</h2>
             </div>
-            <div className="column  is-half-desktop">
-
-              <div className="column  is-full-desktop">
-                <p className="subtitle is-3">{`${celcius}`} ˚</p>
-              </div>
-              <div className="column  is-full-desktop">
-                <div className={`weather-icon ${checkIcon}`}>
-
-                </div>
+            <div className="column  is-full-desktop is-mobile is-full-tablet">
+              <p className="subtitle is-3">{`${celcius}`} ˚</p>
+            </div>
+            <div className="column  is-full-desktop is-mobile is-full-tablet">
+              <div className={`weather-icon ${checkIcon}`}>
               </div>
             </div>
-            <div className="column  is-half-desktop">
-              <div className="column  is-full-desktop">
-                <p className="subtitle is-3">{this.state.weather.currently.summary}</p>
-              </div>
-              <div className="column  is-full-desktop">
-                <p className="subtitle is-3">{this.state.weather.minutely.summary}</p>
-              </div>
+
+            <div className="column  is-full-desktop is-mobile is-full-tablet">
+              <p className="subtitle is-5 has-text-centered">{this.state.weather.currently.summary}</p>
+            </div>
+            <div className="column  is-full-desktop is-mobile is-full-tablet">
+              <p className="subtitle is-5 has-text-centered">{this.state.weather.minutely.summary}</p>
             </div>
           </div>
         </div>

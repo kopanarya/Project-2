@@ -34,19 +34,21 @@ class Navbar extends React.Component{
         <div className="container">
           <div className="navbar-brand">
             <Link to="/" className="navbar-item has-text-primary"><strong>Home</strong></Link>
+            <div className="navbar-item has-text-white">Time: { this.state.now }</div>
             <a role="button" className={`navbar-burger${this.state.active ? ' is-active' : '' }`} onClick={this.toggleActive}>
               <span aria-hidden="true"></span>
               <span aria-hidden="true"></span>
               <span aria-hidden="true"></span>
             </a>
+
           </div>
 
           <div className={`navbar-menu${this.state.active ? ' is-active' : ''}`}>
             {/*everything else*/}
 
             <div className="navbar-start">
-              <div className="navbar-item has-text-white">Time: { this.state.now }
-              </div>
+
+            
             </div>
 
             <div className="navbar-end">

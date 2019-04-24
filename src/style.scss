@@ -9,27 +9,53 @@ body {
   }
 
   .air{
+    opacity: 0.8;
     background-image: url('/images/air.jpg');
     background-size: cover;
     height: 300px;
-
   }
+
+  .air:hover {
+    opacity: 1;
+  }
+
+
   .bike{
+    opacity: 0.8;
     background-image: url('/images/bike.jpg');
     background-size: cover;
     height: 300px;
   }
+
+  .bike:hover {
+    opacity: 1;
+  }
+
   .tube{
+    opacity: 0.8;
     background-image: url('/images/tube.jpg');
     background-size: cover;
     height: 300px;
-
   }
+
+  .tube:hover {
+    opacity: 1;
+  }
+
   .weather{
+    opacity: 0.8;
     background-image: url('/images/weather.jpg');
     background-size: cover;
     height: 300px;
+  }
 
+  .weather:hover {
+    opacity: 1;
+  }
+
+  .columns-weather {
+    max-width: 900px;
+    margin:auto;
   }
 
     .weather-icon {
@@ -64,6 +90,12 @@ body {
   .bikepoints{
     margin-bottom: 15px;
   }
+
+  .tube-columns {
+    max-width: 650px;
+    margin:auto;
+  }
+
   .column{
     &.status{
       border: 1px solid black;

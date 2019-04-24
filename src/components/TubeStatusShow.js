@@ -24,11 +24,11 @@ class TubeStatusShow extends React.Component {
         <div className="container ">
           <h1 className="title is-1 has-text-centered">Tube Status</h1>
           {this.state.lines.map(line =>
-            <div key={line.name} className="columns is-mobile">
-              <div  className={`column tube-color ${line.name} is-half`}>
+            <div key={line.name} className="columns tube-columns is-mobile">
+              <div  className={`column has-text-centered tube-color ${line.name} is-half`}>
                 <h2>{line.name}</h2>
               </div>
-              <div className="column is-half status">
+              <div className="column is-half has-text-centered status">
                 <h2>{line.lineStatuses[0].statusSeverityDescription}</h2>
               </div>
             </div>

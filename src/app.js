@@ -33,15 +33,16 @@ class App extends React.Component{
     return (
       <Router>
         <Navbar />
-        <Switch>
+        <main>
+          <Switch>
+            <Route path="/bike-point" render={() => <BikePointShow location={this.state.location} />} />
+            <Route path="/air-quality" component={AirQualityShow} />
+            <Route path="/tube-status" component={TubeStatusShow} />
+            <Route path="/weather" component={WeatherShow} />
+            <Route path="/" component={Home} />
 
-          <Route path="/bike-point" render={() => <BikePointShow location={this.state.location} />} />
-          <Route path="/air-quality" component={AirQualityShow} />
-          <Route path="/tube-status" component={TubeStatusShow} />
-          <Route path="/weather" component={WeatherShow} />
-          <Route path="/" component={Home} />
-        </Switch>
-
+          </Switch>
+        </main>
       </Router>
     )
 

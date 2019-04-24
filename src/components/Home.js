@@ -9,12 +9,11 @@ class Home extends  React.Component{
 
   render(){
     return(
-      <section className="section">
+      <section className="section has-background-light">
         <div className="container">
           <h1 className="title is-1">London Daily</h1>
-          <h1 className="subtitle is-3">Site for Londoners</h1>
           <div className="columns is-multiline">
-            <div className="column is-half-desktop" >
+            <div className="column is-half-desktop is-half-tablet" >
               <Link to="/air-quality" >
                 <div className="card air">
 
@@ -25,7 +24,7 @@ class Home extends  React.Component{
                 </div>
               </Link>
             </div>
-            <div className="column is-half-desktop" >
+            <div className="column is-half-desktop is-half-tablet" >
               <Link to="/bike-point">
                 <div className="card bike">
 
@@ -36,7 +35,7 @@ class Home extends  React.Component{
                 </div>
               </Link>
             </div>
-            <div className="column is-half-desktop" >
+            <div className="column is-half-desktop is-half-tablet" >
               <Link to="/weather">
                 <div className="card weather">
 
@@ -47,7 +46,7 @@ class Home extends  React.Component{
                 </div>
               </Link>
             </div>
-            <div className="column is-half-desktop" >
+            <div className="column is-half-desktop is-half-tablet" >
               <Link to="/tube-status">
                 <div className="card tube">
 
