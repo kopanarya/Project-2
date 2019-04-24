@@ -8,10 +8,10 @@ class Navbar extends React.Component{
   }
   render(){
     return(
-      <nav className="navbar has-background-grey-darker">
+      <nav className="navbar has-background-grey">
         <div className="container">
           <div className="navbar-brand">
-            <Link to="/" className="navbar-item has-text-danger"><strong>Home</strong></Link>
+            <Link to="/" className="navbar-item has-text-white"><strong>Home</strong></Link>
             <a role="button" className={`navbar-burger${this.state.active ? ' is-active' : '' }`} onClick={this.toggleActive}>
               <span aria-hidden="true"></span>
               <span aria-hidden="true"></span>
@@ -27,10 +27,10 @@ class Navbar extends React.Component{
             </div>
 
             <div className="navbar-end">
-              <Link to="/air-quality" className="navbar-item has-text-danger">Air Quality</Link>
-              <Link to="/bike-point" className="navbar-item has-text-danger">Bike Points</Link>
-              <Link to="/tube-status" className="navbar-item has-text-danger">Tube Status</Link>
-              <Link to="/weather" className="navbar-item has-text-danger">Weather</Link>
+              <Link to="/air-quality" className="navbar-item has-text-white">Air Quality</Link>
+              <Link to="/bike-point" className="navbar-item has-text-white">Bike Points</Link>
+              <Link to="/tube-status" className="navbar-item has-text-white">Tube Status</Link>
+              <Link to="/weather" className="navbar-item has-text-white">Weather</Link>
 
 
             </div>

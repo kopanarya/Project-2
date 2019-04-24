@@ -1,0 +1,56 @@
+@import url('https://fonts.googleapis.com/css?family=Ubuntu');
+
+
+body {
+  font-family: 'Ubuntu', sans-serif;
+
+  .navbar {
+    height: 80px;
+  }
+
+  .air{
+    background-image: url('/images/air.jpg');
+    background-size: cover;
+    height: 300px;
+
+  }
+  .bike{
+    background-image: url('/images/bike.jpg');
+    background-size: cover;
+    height: 300px;
+  }
+  .tube{
+    background-image: url('/images/tube.jpg');
+    background-size: cover;
+    height: 300px;
+
+  }
+  .weather{
+    background-image: url('/images/weather.jpg');
+    background-size: cover;
+    height: 300px;
+
+  }
+
+  .weather-icon {
+    height: 150px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    &.partly-cloudy-day {
+      background-image: url('/images/partly-cloudy.png');
+    }
+    &.clear-day {
+      background-image: url('/images/clear.png');
+    }
+    &.cloudy {
+      background-image: url('/images/cloudy.png');
+    }
+    &.rain {
+      background-image: url('/images/rain.png');
+    }
+    &.fog {
+      background-image: url('/images/fog.png');
+    }
+  }
+}
