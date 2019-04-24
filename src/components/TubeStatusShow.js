@@ -21,22 +21,18 @@ class TubeStatusShow extends React.Component {
 
     return(
       <section className="section">
-        <div className="container">
-          <h1></h1>
-          <div  className="columns  is-multiline">
-            {this.state.lines.map(line =>
-
-              <div key={line.name} className="column is-full-desktop">
-                <div  className={`column tube-color ${line.name} is-half-desktop`}>
-                  <h2>{line.name}</h2>
-                </div>
-                <div className="column is-half-desktop">
-                  <h2>{line.lineStatuses[0].statusSeverityDescription}</h2>
-                </div>
+        <div className="container ">
+          <h1 className="title is-1 has-text-centered">Tube Status</h1>
+          {this.state.lines.map(line =>
+            <div key={line.name} className="columns is-mobile">
+              <div  className={`column tube-color ${line.name} is-half`}>
+                <h2>{line.name}</h2>
               </div>
-            )}
-          </div>
-
+              <div className="column is-half status">
+                <h2>{line.lineStatuses[0].statusSeverityDescription}</h2>
+              </div>
+            </div>
+          )}
         </div>
       </section>
 

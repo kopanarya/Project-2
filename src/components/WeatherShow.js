@@ -18,6 +18,9 @@ class WeatherShow extends React.Component {
   render() {
     if(!this.state.weather) return null
     const checkIcon = this.state.weather.currently.icon
+    let celcius=this.state.weather.currently.temperature
+    celcius=Math.ceil((celcius-32)*(5/9))
+
     console.log(checkIcon)
     return (
 
@@ -30,7 +33,7 @@ class WeatherShow extends React.Component {
             <div className="column  is-half-desktop">
 
               <div className="column  is-full-desktop">
-                <p className="subtitle is-3">{this.state.weather.currently.temperature}</p>
+                <p className="subtitle is-3">{`${celcius}`} ˚</p>
               </div>
               <div className="column  is-full-desktop">
                 <div className={`weather-icon ${checkIcon}`}>

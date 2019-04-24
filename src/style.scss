@@ -53,10 +53,24 @@ body {
         background-image: url('/images/fog.png');
       }
     }
+    .container{
+      &.is-flex{
+        &.text-centered{
+          text-align: center;
+        }
+      }
+
+    }
+  .bikepoints{
+    margin-bottom: 15px;
+  }
   .column{
+    &.status{
+      border: 1px solid black;
+    }
     &.tube-color {
       height: 50px;
-
+      border: 1px solid black;
       &.Bakerloo{
        background-color: #B26300;
        color: $color;

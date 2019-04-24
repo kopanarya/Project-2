@@ -28,21 +28,23 @@ class AirQualityShow extends React.Component {
     return (
       <section className="section">
         <div className="container">
+          <h1 className="title is-1 has-text-centered">Air Quality</h1>
+          <hr />
           <div className="columns is-multiline">
             <div  className="column is-half-desktop is-full-tablet">
-              <h1 className="title is-2">ForecastText</h1>
+              <h1 className="title is-3">Air Info</h1>
               <div className="content">
                 <p dangerouslySetInnerHTML={{ __html: this.decodeHTML(this.state.AirQuality.currentForecast[0].forecastText) }}></p>
               </div>
             </div>
             <div className="column is-half-desktop is-full-tablet">
               <div className="column">
-                <h1 className="title is-2">Forecast Band</h1>
-                <h1>{this.state.AirQuality.currentForecast[0].forecastBand}</h1>
-              </div>
-              <div className="column">
-                <h1 className="title is-2">Forecast Summary</h1>
-                <h1>{this.state.AirQuality.currentForecast[0].forecastSummary}</h1>
+                <figure className="image">
+                  <img src="/images/air.jpg" />
+                </figure>
+                <hr/>
+                <h1>Pollution is {this.state.AirQuality.currentForecast[0].forecastBand}</h1>
+
               </div>
             </div>
           </div>

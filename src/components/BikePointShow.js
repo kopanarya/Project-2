@@ -11,7 +11,7 @@ class BikePointShow extends React.Component {
   }
 
   componentDidMount() {
-    axios.get(`https://api.tfl.gov.uk/bikepoint?lat=${this.props.location.lat}&lon=${this.props.location.lon}&radius=500`)
+    axios.get(`https://cors-anywhere.herokuapp.com/https://api.tfl.gov.uk/bikepoint?lat=${this.props.location.lat}&lon=${this.props.location.lon}&radius=500`)
       .then(res => this.setState({ BikePoint: res.data.places }))
   }
   render(){
@@ -19,13 +19,15 @@ class BikePointShow extends React.Component {
     return(
       <section className="section">
         <div className="container">
+          <h1 className="title is-1 has-text-centered">Bike Points Near You</h1>
+          <hr />
           <div className="columns is-multiline">
             {this.state.BikePoint.map(bike =>
-              <div key={bike.commonName} className="column is-one-quarter-desktop is-half-tablet">
+              <div key={bike.commonName} className="column is-one-quarter-desktop is-half-tablet has-text-centered bikepoints">
 
-                <h1 className="subtitle is-3">{bike.commonName}</h1>
-                <h1 className="subtitle is-5">Avaliable Bikes :{bike.additionalProperties[6].value}</h1>
-                <h2 className="subtitle is-5">Avaliable Spaces:{bike.additionalProperties[7].value}</h2>
+                <h4 className="subtitle is-4">{bike.commonName}</h4>
+                <p><strong>Avaliable Bikes:</strong> {bike.additionalProperties[6].value}</p>
+                <p><strong>Avaliable Spaces:</strong> {bike.additionalProperties[7].value}</p>
               </div>
             )}
           </div>
